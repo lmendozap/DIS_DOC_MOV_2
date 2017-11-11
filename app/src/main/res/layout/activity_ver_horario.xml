@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="unmsm.com.logingooglelap.VerHorarioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- La primera fila : ENCABEZADO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="Horas"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/ID"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="LUN"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="MAR"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="MIER"
+                android:textColor="#FFF"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="JUEV"
+                android:textColor="#FFF"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="VIER"
+                android:textColor="#FFF"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="SAB"
+                android:textColor="#FFF"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <!-- Segunda Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="08:00-09:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora41"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora51"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora61"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Tercera Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="09:00-10:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora42"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora52"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora62"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Cuarta Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="10:00-11:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora33"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora43"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora53"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora63"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Quinta Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="11:00-12:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora24"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora34"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora44"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora54"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora64"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Sexta Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="12:00-13:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora35"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora45"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora55"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora65"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Septima Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="13:00-14:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora16"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora26"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora36"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora46"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora56"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora66"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Octava Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="14:00-15:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora17"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora27"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora37"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora47"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora57"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora67"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Novena Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="15:00-16:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora18"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora28"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora38"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora48"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora58"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora68"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Decima Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="16:00-17:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora19"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora29"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora39"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora49"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora59"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora69"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- 11 Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="17:00-18:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora110"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora210"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora310"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora410"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora510"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora610"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- 12 Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="18:00-19:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora111"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora211"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora311"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora411"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora511"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora611"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- 13 Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="19:00-20:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora112"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora212"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora312"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora412"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora512"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora612"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- 14 Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="20:00-21:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora113"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora213"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora313"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora413"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora513"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora613"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- 15 Fila-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="2"
+                android:background="@color/fondoEncabezado"
+                android:gravity="center"
+                android:text="21:00-22:00"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/hora114"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/hora214"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora314"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora414"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora514"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/hora614"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/fondoceldas"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

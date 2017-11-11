@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "734939294381",
+    "firebase_url": "https://loginlap.firebaseio.com",
+    "project_id": "loginlap",
+    "storage_bucket": "loginlap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734939294381:android:1c94bc6243d14776",
+        "android_client_info": {
+          "package_name": "unmsm.com.logingooglelap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734939294381-c1u6vataq1kne69hpcbsrkqpri8gfvq3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "unmsm.com.logingooglelap",
+            "certificate_hash": "315520b2bf859d015dadc034c2356f73ed7ca17e"
+          }
+        },
+        {
+          "client_id": "734939294381-6lm3o8ctloc1pfrnn2ouvfkibvq4vein.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqOc9sNV62zNPl-3PlQeLQLsHCG3qocH0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734939294381-6lm3o8ctloc1pfrnn2ouvfkibvq4vein.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

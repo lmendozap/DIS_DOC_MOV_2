@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Disponibilidad Docente</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_registrar_horas">RegistrarHorasActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="hora_8"> 08:00 am </string>
+    <string name="hora_9"> 09:00 am </string>
+    <string name="hora_10"> 10:00 am</string>
+    <string name="hora_11"> 11:00 am </string>
+    <string name="hora_12"> 12:00 am</string>
+    <string name="hora_13"> 01:00 pm</string>
+    <string name="hora_14"> 02:00 pm</string>
+    <string name="hora_15"> 03:00 pm</string>
+    <string name="hora_16"> 04:00 pm</string>
+    <string name="hora_17"> 05:00 pm</string>
+    <string name="hora_18"> 06:00 pm</string>
+    <string name="hora_19"> 07:00 pm</string>
+    <string name="hora_20"> 08:00 pm</string>
+    <string name="hora_21"> 09:00 pm</string>
+
+
+    <string name="colorBoton">#FFDCE9EC</string>
+    <string name="colorBotonPresionado">#FFDF7D7D</string>
+    <string name="colorEncabezado">#d96363</string>
+</resources>
