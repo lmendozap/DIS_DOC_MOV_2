@@ -29,6 +29,7 @@ public class RegistrarHorasActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     static int horasTotales;
     private String dni;
+    private String correo;
     static int horasSeleccionadas;
 
     static Toolbar toolbar;
@@ -38,6 +39,7 @@ public class RegistrarHorasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_horas);
         horasTotales=(Integer)getIntent().getExtras().getInt("horas");
         dni=(String)getIntent().getExtras().get("dni");
+        correo=(String)getIntent().getExtras().get("correo");
         horasSeleccionadas=0;
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -60,6 +62,7 @@ public class RegistrarHorasActivity extends AppCompatActivity {
                 if(horasSeleccionadas==horasTotales){
                      Intent intent = new Intent(view.getContext(),ResumenHorasActivity.class);
                      intent.putExtra("dni",dni);
+                    intent.putExtra("correo",correo);
                      startActivityForResult(intent, 0);
                 }else{
                     Toast toast1 = Toast.makeText(getApplicationContext(),

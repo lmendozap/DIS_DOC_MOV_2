@@ -7,6 +7,12 @@ import java.util.List;
  * Created by Luis on 9/11/2017.
  */
 
+/*
+* Esta clase almacena las horas disponibles del docente.
+* Cada lista almacena una conjunto de valores de cadena que representan las horas seleccionadas
+* por el profesor
+* */
+
 public class Disponibilidad implements Serializable {
 
     private List<String> Lunes;

@@ -6,6 +6,9 @@ import android.widget.Button;
 /**
  * Created by Luis on 10/11/2017.
  */
+/*
+* Esta clase sirve para darle formato a las celdas de una tabla de forma programatica.
+* */
 
 
 public class Util {

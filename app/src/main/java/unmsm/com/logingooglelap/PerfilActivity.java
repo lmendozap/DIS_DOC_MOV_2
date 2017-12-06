@@ -1,7 +1,9 @@
 package unmsm.com.logingooglelap;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
+import unmsm.com.logingooglelap.model.Curso;
 import unmsm.com.logingooglelap.model.Disponibilidad;
 import unmsm.com.logingooglelap.model.Docente;
 import unmsm.com.logingooglelap.model.Usuario;
@@ -55,11 +58,18 @@ public class PerfilActivity extends AppCompatActivity implements GoogleApiClient
     DatabaseReference docenteFirebase;
     Usuarios usuariosRecuperados;
     Docente docenteRecuperado;
+    AlertDialog.Builder dialogoRegistro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+        displayName=getIntent().getExtras().getString("name");
+        correo = getIntent().getExtras().getString("correo");
+        urlPhoto=getIntent().getExtras().getString("photoUrl");
+
+
+
         twEmail=(TextView)findViewById(R.id.twEmail);
         twName=(TextView)findViewById(R.id.twName);
         twNombres=(TextView)findViewById(R.id.twNombres);
@@ -67,20 +77,32 @@ public class PerfilActivity extends AppCompatActivity implements GoogleApiClient
         twHoras=(TextView)findViewById(R.id.twHoras);
         iwPhoto=(ImageView)findViewById(R.id.photoImage);
 
+        twEmail.setText(correo);
+        twName.setText(displayName);
 
         actionMenu =(FloatingActionMenu)findViewById(R.id.floatingActionMenu);
         actionMenu.setClosedOnTouchOutside(true);
 
-        displayName=getIntent().getExtras().getString("name");
-        correo = getIntent().getExtras().getString("correo");
-        urlPhoto=getIntent().getExtras().getString("photoUrl");
 
-        twEmail.setText(correo);
-        twName.setText(displayName);
+        dialogoRegistro = new AlertDialog.Builder(this);
+        dialogoRegistro.setTitle("Registra disponibilidad");
+        dialogoRegistro.setMessage(" Usted ya registro su disponibilidad horaria ¿Desea actualizarla?");
+        dialogoRegistro.setCancelable(false);
+        dialogoRegistro.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+                registrarDisponibilidad();
+            }
+        });
+        dialogoRegistro.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+
+            }
+        });
 
         try {
             Glide.with(this).load(urlPhoto).into(iwPhoto);
         }catch (Exception e){
+
         }
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN ).requestEmail().build();
@@ -104,7 +126,6 @@ public class PerfilActivity extends AppCompatActivity implements GoogleApiClient
                 usuariosRecuperados = dataSnapshot.getValue(Usuarios.class);
                 try{
                     Log.d("--------------------> ","Los usuarios recuperados son :"+usuariosRecuperados.getListaUsuarios().size());
-                    //Toast.makeText(getApplicationContext(),"Usuarios Recuperados" +usuariosRecuperados.getListaUsuarios().size() ,Toast.LENGTH_SHORT).show();
                     initPerfil();
                 }catch(Exception e)
                 {
@@ -137,7 +158,7 @@ public class PerfilActivity extends AppCompatActivity implements GoogleApiClient
             }
 
             if (band) {
-                Log.d("--------------------> ", "EL USUARIO YA EXISTE");
+                //Log.d("--------------------> ", "EL USUARIO YA EXISTE");
 
                // Toast.makeText(getApplicationContext(),"El usuario Existe" +usuariosRecuperados.getListaUsuarios().size() ,Toast.LENGTH_SHORT).show();
 
@@ -159,7 +180,7 @@ public class PerfilActivity extends AppCompatActivity implements GoogleApiClient
                 });
             } else {
                 actionMenu.setVisibility(View.INVISIBLE);
-                Toast.makeText(getApplicationContext(),"El usuario no Existe" +usuariosRecuperados.getListaUsuarios().size() ,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"No es Docente de la FISI" ,Toast.LENGTH_SHORT).show();
             }
 
         }catch (Exception e){
@@ -171,21 +192,41 @@ public class PerfilActivity extends AppCompatActivity implements GoogleApiClient
     }
 
     public void clickRegistrarDisponibilidad(View view) {
-        Intent intent = new Intent(this,RegistrarHorasActivity.class);
-        intent.putExtra("horas",horas);
-        intent.putExtra("dni",dni);
-        startActivity(intent);
+
+        if(docenteRecuperado.getDisponibilidad()!=null){
+            if(docenteRecuperado.getIntentos()<3) {
+                dialogoRegistro.show();
+
+            }else{
+                Toast.makeText(getApplicationContext(),"Alcanzo el número de intentos máximos" ,Toast.LENGTH_SHORT).show();
+            }
+
+        }else{
+            registrarDisponibilidad();
+        }
     }
 
+    public void registrarDisponibilidad(){
+
+            Intent intent = new Intent(this, RegistrarHorasActivity.class);
+            intent.putExtra("horas", horas);
+            intent.putExtra("dni", dni);
+            intent.putExtra("correo", correo);
+            startActivity(intent);
+
+    }
     public void clickVerRegistro(View view) {
 
         Disponibilidad disponibilidad = docenteRecuperado.getDisponibilidad();
-        if(disponibilidad==null){
+        if(disponibilidad==null || docenteRecuperado.getCursosSeleccionados()==null){
             Toast.makeText(getApplicationContext(),"Aún no a registrado su disponibilidad" ,Toast.LENGTH_SHORT).show();
         }else{
-            Intent intent = new Intent(this,VerHorarioActivity.class);
-            intent.putExtra("disponibilidad",disponibilidad);
-            startActivity(intent);
+
+               Intent intent = new Intent(this,VerHorarioActivity.class);
+               intent.putExtra("disponibilidad",disponibilidad);
+               intent.putExtra("dni",dni);
+               startActivity(intent);
+
 
         }
 

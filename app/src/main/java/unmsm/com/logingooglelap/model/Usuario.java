@@ -3,6 +3,9 @@ package unmsm.com.logingooglelap.model;
 /**
  * Created by Luis on 9/11/2017.
  */
+/*
+* Almacena la informacion particular de un usuario en el sistema.
+* */
 
 public class Usuario {
     private String dni;

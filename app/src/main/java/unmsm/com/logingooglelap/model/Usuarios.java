@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Created by Luis on 9/11/2017.
  */
+/*
+* Alamacena la lista de todos los usuarios del sistema
+* */
 
 public class Usuarios implements Serializable {
 

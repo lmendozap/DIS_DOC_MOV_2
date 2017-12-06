@@ -1,8 +1,16 @@
 package unmsm.com.logingooglelap.model;
 
+import java.util.List;
+
 /**
  * Created by Luis on 9/11/2017.
  */
+
+/**
+ * Esta clase almacena  los datos personales y academicos del docente; asi tambien su
+ * disponibilidad horaria y sus cursos de preferencia
+ */
+
 
 public class Docente {
 
@@ -15,7 +23,10 @@ public class Docente {
     private String departamentoAcademico;
     private String correo;
     private int num_horas;
+    private int intentos;
     private Disponibilidad disponibilidad;
+    private List<Curso> cursosPreferencia;
+    private List<Curso> cursosSeleccionados;
 
 
 
@@ -98,5 +109,31 @@ public class Docente {
 
     public void setDisponibilidad(Disponibilidad disponibilidad) {
         this.disponibilidad = disponibilidad;
+    }
+
+
+    public List<Curso> getCursosPreferencia() {
+        return cursosPreferencia;
+    }
+
+    public void setCursosPreferencia(List<Curso> cursosPreferencia) {
+        this.cursosPreferencia = cursosPreferencia;
+    }
+
+    public List<Curso> getCursosSeleccionados() {
+        return cursosSeleccionados;
+    }
+
+    public void setCursosSeleccionados(List<Curso> cursosSeleccionados) {
+        this.cursosSeleccionados = cursosSeleccionados;
+    }
+
+
+    public int getIntentos() {
+        return intentos;
+    }
+
+    public void setIntentos(int intentos) {
+        this.intentos = intentos;
     }
 }

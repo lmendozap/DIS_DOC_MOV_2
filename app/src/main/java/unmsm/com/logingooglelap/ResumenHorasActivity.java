@@ -19,6 +19,7 @@ import unmsm.com.logingooglelap.model.Disponibilidad;
 public class ResumenHorasActivity extends AppCompatActivity {
 
     private String dni;
+    private String correo;
     private List<String> Lunes;
     private List<String> Martes;
     private List<String> Miercoles;
@@ -139,6 +140,7 @@ public class ResumenHorasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumen_horas);
         dni= (String)getIntent().getExtras().get("dni");
+        correo= (String)getIntent().getExtras().get("correo");
         Lunes = new ArrayList<String>();
         Martes = new ArrayList<String>();
         Miercoles = new ArrayList<String>();
@@ -264,6 +266,7 @@ public class ResumenHorasActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(view.getContext(),RegistrarCursoActivity.class);
                 intent.putExtra("dni",dni);
+                intent.putExtra("correo",correo);
                 startActivity(intent);
 
 
@@ -456,6 +459,6 @@ public class ResumenHorasActivity extends AppCompatActivity {
         if(SabadoFragment.button18Si){ hora611.setBackgroundResource(R.color.fondoceldasSeleccionada); Sabado.add("18");}
         if(SabadoFragment.button19Si){ hora612.setBackgroundResource(R.color.fondoceldasSeleccionada); Sabado.add("19");}
         if(SabadoFragment.button20Si){ hora613.setBackgroundResource(R.color.fondoceldasSeleccionada); Sabado.add("20");}
-        if(SabadoFragment.button21Si){ hora14.setBackgroundResource(R.color.fondoceldasSeleccionada); Sabado.add("21");}
+        if(SabadoFragment.button21Si){ hora614.setBackgroundResource(R.color.fondoceldasSeleccionada); Sabado.add("21");}
     }
 }

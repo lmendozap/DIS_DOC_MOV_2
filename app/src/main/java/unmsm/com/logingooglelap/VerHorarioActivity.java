@@ -1,7 +1,10 @@
 package unmsm.com.logingooglelap;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,7 +15,7 @@ import unmsm.com.logingooglelap.model.Disponibilidad;
 public class VerHorarioActivity extends AppCompatActivity {
 
     private Disponibilidad disponibilidad;
-    
+    private String dni;
     private Boolean botonL8;
     private Boolean botonL9;
     private Boolean botonL10;
@@ -311,14 +314,29 @@ public class VerHorarioActivity extends AppCompatActivity {
 
 
         disponibilidad= (Disponibilidad)getIntent().getExtras().getSerializable("disponibilidad");
+        dni= (String) getIntent().getExtras().get("dni");
         limpiarBotones();
         decodificarHoras();
         pintarHoras();
         if(disponibilidad==null){
             Toast.makeText(getApplicationContext(),"No se pudo obtener la disponibilidad" ,Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(getApplicationContext(),"Presenta Disponibilidad" ,Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"Presenta Disponibilidad" ,Toast.LENGTH_SHORT).show();
         }
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab2);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                    Intent intent = new Intent(view.getContext(),VerCursosRegistradosActivity.class);
+                    intent.putExtra("dni",dni);
+                    startActivityForResult(intent, 0);
+
+
+            }
+        });
 
     }
     

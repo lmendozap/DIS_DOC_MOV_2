@@ -40,12 +40,14 @@
                 android:textSize="17dp" />
 
             <Button
+                android:id="@+id/buttonD"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:id="@+id/buttonD"
-                android:background="@drawable/inicio"/>
+                android:background="@drawable/ic_dowload"
+                android:onClick="mostrarPDF" />
+
             <Button
                 android:id="@+id/buttonI"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"

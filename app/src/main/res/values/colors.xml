@@ -5,10 +5,10 @@
     <color name="colorAccent">#df7d7d</color>
     <color name="fondoLogin">#a67878</color>
     <color name="fondoEncabezado">#df7d7d</color>
-    <color name="fondoceldas">#c9d2d5</color>
+    <color name="fondoceldas">#bdbdbd</color>
     <color name="fondoceldasSeleccionada">#5892c1</color>
     <color name="blanco">#ffffff</color>
-    <color name="plomo">#a9a5a5</color>
+    <color name="plomo">#9e9e9e</color>
 
 
 </resources>
