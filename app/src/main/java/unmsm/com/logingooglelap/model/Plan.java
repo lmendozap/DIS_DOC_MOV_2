@@ -16,6 +16,7 @@ public class Plan {
 
 
 
+
     public int getCodEscuela() {
         return codEscuela;
     }
